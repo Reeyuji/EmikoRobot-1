@@ -17,6 +17,7 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 """
+
 from asyncio import gather
 from datetime import datetime, timedelta
 from io import BytesIO
@@ -90,7 +91,7 @@ def generate_captcha():
 
 def test_speedtest():
     def speed_convert(size):
-        power = 2 ** 10
+        power = 2**10
         zero = 0
         units = {0: "", 1: "Kb/s", 2: "Mb/s", 3: "Gb/s", 4: "Tb/s"}
         while size > power:

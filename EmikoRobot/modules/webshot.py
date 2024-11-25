@@ -17,6 +17,7 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 """
+
 from pyrogram import filters
 from pyrogram.types import Message
 
@@ -31,9 +32,7 @@ __mod_name__ = "Webshot​"
 async def take_ss(_, message: Message):
     try:
         if len(message.command) != 2:
-            return await message.reply_text(
-                "Give A Url To Fetch Screenshot."
-            )
+            return await message.reply_text("Give A Url To Fetch Screenshot.")
         url = message.text.split(None, 1)[1]
         m = await message.reply_text("**Taking Screenshot**")
         await m.edit("**Uploading**")
