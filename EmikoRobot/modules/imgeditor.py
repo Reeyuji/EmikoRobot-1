@@ -59,6 +59,8 @@ from EmikoRobot.ex_plugins.ImageEditor.edit_5 import (  # pylint:disable=import-
 from EmikoRobot import pbot
 
 lel = 00000000
+
+
 # pylint:disable=import-error
 @pbot.on_message(filters.command(["edit", "editor"]))
 async def photo(client: pbot, message: Message):
@@ -99,10 +101,14 @@ async def photo(client: pbot, message: Message):
                     [
                         InlineKeyboardButton(text="🌇 SEPIA", callback_data="sepia"),
                         InlineKeyboardButton(text="✏️ PENCIL", callback_data="pencil"),
-                        InlineKeyboardButton(text="🐶 CARTOON", callback_data="cartoon"),
+                        InlineKeyboardButton(
+                            text="🐶 CARTOON", callback_data="cartoon"
+                        ),
                     ],
                     [
-                        InlineKeyboardButton(text="🔄 INVERT", callback_data="inverted"),
+                        InlineKeyboardButton(
+                            text="🔄 INVERT", callback_data="inverted"
+                        ),
                         InlineKeyboardButton(text="🔮 GLITCH", callback_data="glitch"),
                         InlineKeyboardButton(
                             text="✂️ REMOVE BG", callback_data="removebg"
@@ -298,7 +304,9 @@ async def cb_handler(client: pbot, query: CallbackQuery):
                             InlineKeyboardButton(
                                 text="⚫ Black ⚫", callback_data="black"
                             ),
-                            InlineKeyboardButton(text="🔵 Blue 🔵", callback_data="blue"),
+                            InlineKeyboardButton(
+                                text="🔵 Blue 🔵", callback_data="blue"
+                            ),
                         ],
                     ]
                 ),
